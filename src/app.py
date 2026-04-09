@@ -1,6 +1,6 @@
 import os
 import requests
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ API_KEY = os.getenv("API_KEY")
 
 @app.route("/")
 def home():
-    return "Weather service is running"
+    return render_template("index.html")
 
 
 @app.route("/weather")

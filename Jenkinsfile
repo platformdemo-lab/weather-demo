@@ -9,6 +9,9 @@ withCredentials([
     port: "5000",
     envVars: [
       "API_KEY": API_KEY
-    ]
+    ],
+    runTests: true,
+    runCodeScan: true,
+    runContainerScan: true
   )
 }

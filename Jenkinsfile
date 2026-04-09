@@ -4,7 +4,7 @@ withCredentials([
   string(credentialsId: 'weather-api-key', variable: 'API_KEY')
 ]) {
 
-  pythonService(
+  pythonservice(
     appName: "weather-service",
     port: "5000",
     envVars: [

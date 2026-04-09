@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 API_KEY = os.getenv("API_KEY")
 
+
 @app.route("/")
 def home():
     return "Weather service is running"
@@ -20,15 +21,15 @@ def get_weather():
 
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 
-    try:
-        response = requests.get(url)
-        data = response.json()
+    response = requests.get(url)
+    data = response.json()
 
-        return jsonify({
-            "city": city,
-            "temperature": data["main"]["temp"],
-            "weather": data["weather"][0]["description"]
-        })
+    return jsonify({
+        "city": city,
+        "temperature": data["main"]["temp"],
+        "weather": data["weather"][0]["description"]
+    })
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

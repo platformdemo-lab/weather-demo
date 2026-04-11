@@ -1,0 +1,5 @@
+site_name: weather-demo
+nav:
+  - Overview: docs/index.md
+plugins:
+  - techdocs-core

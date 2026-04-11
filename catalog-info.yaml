@@ -5,6 +5,8 @@ metadata:
   description: Sample Flask weather service used to validate the platform flow
   annotations:
     github.com/project-slug: platformdemo-lab/weather-demo
+    backstage.io/source-location: url:https://github.com/platformdemo-lab/weather-demo
+    backstage.io/techdocs-ref: dir:.
     jenkins.io/job-full-name: weather-demo
 spec:
   type: service

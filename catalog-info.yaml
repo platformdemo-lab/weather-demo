@@ -5,7 +5,7 @@ metadata:
   description: Sample Flask weather service used to validate the platform flow
   annotations:
     github.com/project-slug: platformdemo-lab/weather-demo
-    jenkins.io/job-full-name: weather-service
+    jenkins.io/job-full-name: weather-demo
 spec:
   type: service
   owner: user:default/guest
